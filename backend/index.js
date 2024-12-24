@@ -7,9 +7,7 @@ const PORT = process.env.PORT || 3000;
 connectDb();
 app.use(express.json())
 
-app.get("/",(req,res)=>{
-    res.send("hello world");
-})
+app.use("/api", require ("./routes/books"))
 
 app.listen(PORT,(err)=>{
     console.log(`app is running on ${PORT}`);
