@@ -5,8 +5,8 @@ const connectDb= require("./config/connectionDb");
 const cors = require ("cors")
 
 connectDb(); // for database connection
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 app.use("/api", require ("./routes/books")) // for all routes
 
